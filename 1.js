@@ -1,28 +1,7 @@
 // detect a cycle in a linked list
 
-function List() {
-    this.head = null;
-    this.tail = null;
+const {List, Node} = require('./LinkedList');
 
-    this.add = (node) => {
-        if (this.head == null) {
-            this.head = node;
-            this.tail = node;
-        } else {
-            this.tail.next = node;
-            this.tail = node;
-        }
-    }
-
-    this.getHead = () => {
-        return this.head;
-    }
-}
-
-function Node(data) {
-    this.data = data;
-    this.next = null;
-}
 
 function hasCycle(head) {
     let slow = head;
